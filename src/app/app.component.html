@@ -2,20 +2,14 @@
   <nb-layout-header fixed>Company Name</nb-layout-header>
   <nb-sidebar>Sidebar Content</nb-sidebar>
   <nb-layout-column>
-    Page Content <button nbButton>Hello World</button>
+    <nb-card>
+      <nb-route-tabset [tabs]=tabs fullWidth="true"></nb-route-tabset>
+    </nb-card>
 
-    <nb-tabset>
-      <nb-tab tabTitle="Simple Tab #1">    Tab content 1  </nb-tab>
-      <nb-tab tabTitle="Simple Tab #2">    Tab content 2  </nb-tab>
-    </nb-tabset>
-<nb-card>
-  <nb-route-tabset [tabs]=tabs fullWidth="true"></nb-route-tabset>
-  <conmeno [tabs]=tabs fullWidth="true"></conmeno>
-</nb-card>
-
+    <nb-card>
+      <custom-route-tabset [tabs]=tabs fullWidth="true"></custom-route-tabset>
+    </nb-card>
 
   </nb-layout-column>
 </nb-layout>
-
-<h2>comeno</h2>
 <router-outlet></router-outlet>

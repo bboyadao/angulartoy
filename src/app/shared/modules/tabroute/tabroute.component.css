@@ -1,7 +1,5 @@
 @use '@nebular/theme/styles/theming' as *;
-* {
-  color: red; }
-
+@use '_tabroute.component.scss' as *;
 .route-tabset {
   display: flex;
   flex-direction: row;

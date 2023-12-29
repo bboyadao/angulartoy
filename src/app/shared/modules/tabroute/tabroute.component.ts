@@ -38,41 +38,41 @@ export class NbMergeConfigsPipe implements PipeTransform {
 }
 
 @Component({
-  selector: 'conmeno',
+  selector: 'custom-route-tabset',
   templateUrl: './tabroute.component.html',
   styleUrls: ['./tabroute.component.scss']
 })
-export class TabrouteComponent extends NbRouteTabsetComponent{
-  @HostBinding('class.full-width') override fullWidthValue: boolean = false;
+export class TabrouteComponent {
+  @HostBinding('class.full-width')  fullWidthValue: boolean = false;
 
   /**
    * Tabs configuration
    */
-  @Input() override tabs: NbRouteTab[] = [];
+  @Input()  tabs: NbRouteTab[] = [];
 
   /**
    * Options passed to `routerLinkActiveOptions` directive which set on tab links.
    * `{ exact: true }` by default.
    */
-  @Input() override activeLinkOptions: RouterLinkActive['routerLinkActiveOptions'] = { exact: true };
+  @Input()  activeLinkOptions: RouterLinkActive['routerLinkActiveOptions'] = { exact: true };
 
   /**
    * Take full width of a parent
    * @param {boolean} val
    */
   @Input()
-  override set fullWidth(val: boolean) {
+   set fullWidth(val: boolean) {
     this.fullWidthValue = convertToBoolProperty(val);
   }
-  static override ngAcceptInputType_fullWidth: NbBooleanInput;
+  static  ngAcceptInputType_fullWidth: NbBooleanInput;
 
   /**
    * Emits when tab is selected
    * @type {EventEmitter<NbRouteTab>}
    */
-  @Output() override changeTab: EventEmitter<NbRouteTab> = new EventEmitter<NbRouteTab>();
+  @Output()  changeTab: EventEmitter<NbRouteTab> = new EventEmitter<NbRouteTab>();
 
-  override selectTab(tab: NbRouteTab) {
+   selectTab(tab: NbRouteTab) {
     this.changeTab.emit(tab);
   }
 }

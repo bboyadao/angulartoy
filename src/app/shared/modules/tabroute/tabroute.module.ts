@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {NbIconModule, NbRouteTabsetModule} from "@nebular/theme";
+import {NbIconModule, NbRouteTabsetModule, NbTableModule, NbTabsetModule} from "@nebular/theme";
 import {NbMergeConfigsPipe, TabrouteComponent} from "./tabroute.component";
 import {RouterModule} from "@angular/router";
 
@@ -16,7 +16,8 @@ import {RouterModule} from "@angular/router";
     RouterModule,
     NbRouteTabsetModule,
     NbIconModule,
-
+    NbTableModule,
+    NbTabsetModule,
   ],
   exports: [TabrouteComponent]
 })
